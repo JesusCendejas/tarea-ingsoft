@@ -53,21 +53,9 @@ App:
 - Soporte para múltiples dispositivos: seleccionar a cuál controlar.
 - OTA firmware updates (Solo para dispositivos propietarios).
 
-Dispositivo:
-- Recepción de audio vía AirPlay (streaming desde iPhone/Mac).
-- Recepción de audio vía Bluetooth A2DP.
-- Control de tira WS2812 por MQTT: frames RGBA en tiempo real, efectos predefinidos y brillo.
-- Web dashboard accesible desde cualquier lugar (MQTT sobre WebSocket público — HiveMQ).
-- Configuración WiFi vía captive portal (AP mode).
-- Audio output vía I2S.
 
 **Explícitamente fuera del alcance**
 
-- Asistente de voz.
-- EQ por hardware.
-- EQ por software.
-- Multi-room sync: una sola bocina, sin sincronización entre múltiples dispositivos.
-- Display/OLED.
 - Reproducción de audio en el navegador.
 - Configuración de la red WiFi de los dispositivos (cada dispositivo expone su propio captive portal para eso).
 - Almacenamiento de animaciones en el navegador (las animaciones se envían y persisten en el dispositivo).
