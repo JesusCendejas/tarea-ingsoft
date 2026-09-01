@@ -1,7 +1,7 @@
 # Visión del producto
 
 **Autor:** Jesus Cendejas
-**Fecha de la última versión:** 2026-08-20  
+**Fecha de la última versión:** 2026-09-1 
 **Repositorio:** Alice-IA/airplay-moon-speaker
 
 ---
