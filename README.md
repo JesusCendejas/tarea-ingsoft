@@ -45,7 +45,7 @@ El usuario casual quiere abrir la web y elegir un efecto/color en dos clics; el 
 **Dentro del alcance**
 
 App:
-- Conexión con dispositivos vía MQTT over WebSockets, usando la MAC como identificador.
+- Conexión con dispositivos vía MQTT over WebSockets, usando la MAC address como identificador.
 - Envío de frames de animación RGBA en modo streaming.
 - Control de efectos predefinidos: velocidad, intensidad, brillo y paleta de colores.
 - Visualización del estado del dispositivo: online/offline, IP, MAC, RSSI, heap libre y versión de firmware.
