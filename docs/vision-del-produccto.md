@@ -19,6 +19,3 @@
 ## 4. Ideas futuras
 - **Music sync:** la app procesa el audio y envía el análisis de frecuencias para sincronizar los LEDs con la música.
 - **Animaciones con AI:** el usuario describe una animación en texto o sube una imagen, y la AI genera la animación o la paleta de colores lista para enviar al dispositivo.
-
-
-hola

@@ -13,9 +13,9 @@
 **Nombre del sistema:** MoonLight
 
 **Descripción:**  
-MoonLight es una webapp de control para dispositivos de iluminación inteligente compatibles: lámparas y controladores de tiras LED  MQTT. Desde cualquier navegador, el usuario controla animaciones RGBA en tiempo real, efectos predefinidos, brillo y color, y diseña sus propias animaciones — todo sobre MQTT, sin instalar apps nativas ni depender de un ecosistema cerrado.
+MoonLight es una progressive web app (PWA) de control para dispositivos de iluminación inteligente compatibles: lámparas y controladores de tiras LED  MQTT. Desde cualquier navegador, el usuario controla animaciones RGBA en tiempo real, efectos predefinidos, brillo y color, y diseña sus propias animaciones — todo sobre MQTT, sin instalar apps nativas ni depender de un ecosistema cerrado.
 
-**Nota de alcance:** los dispositivos (bocina inteligente, lámparas, controladores de tiras) son productos independientes con su propio firmware. Este proyecto cubre únicamente la webapp; los dispositivos se tratan como sistemas externos que siguen el protocolo MQTT conocido.
+**Nota de alcance:** los dispositivos (bocina inteligente, lámparas, controladores de tiras) son productos independientes con su propio firmware. Este proyecto cubre únicamente la PWA; los dispositivos se tratan como sistemas externos que siguen el protocolo MQTT conocido.
 
 ---
 
@@ -70,7 +70,7 @@ App:
 
 ## 4. Tipo de sistema y atributos de calidad
 
-**Tipo de sistema:** Aplicación web de tiempo real para control de dispositivos IoT sobre MQTT. (SAAS)
+**Tipo de sistema:** Aplicación web progresiva de tiempo real para control de dispositivos IoT sobre MQTT. (SAAS)
 
 La arquitectura tiene tres componentes:
 
