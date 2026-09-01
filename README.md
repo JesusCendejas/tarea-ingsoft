@@ -80,7 +80,7 @@ La arquitectura tiene tres componentes:
 
 3.- **Broker MQTT:** canal de comunicación con los dispositivos. En desarrollo se usa un broker público (HiveMQ, sin autenticación). **En producción se migrará a un broker con autenticación por usuario/dispositivo (ACL por topic)**, de forma que cada usuario solo pueda publicar y suscribirse a los topics de sus propios dispositivos.
 
-**Atributos de calidad prioritarios:**
+**Atributos de calidad:**
 - *Seguridad:* un usuario solo puede controlar dispositivos que le pertenecen (aislamiento por topic, credenciales únicas por dispositivo).
 - *Latencia:* el streaming de frames debe sentirse inmediato (30 fps objetivo de animación).
 - *Usabilidad:* activar un efecto debe tomar pocos clics.
