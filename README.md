@@ -104,9 +104,9 @@ La arquitectura tiene tres componentes:
 - *Sprint 5:* Broker propio con autenticación y ACL por topic; migración del firmware del dispositivo a credenciales.
 - *Sprint 6:* Pulido, pruebas y documentación final.
 
-**Alternativa descartada 1:** Cascada. Exige requisitos cerrados al inicio, y en un proyecto que depende de hardware real (latencia MQTT, límites de memoria, comportamiento de los LEDs) los requisitos cambian en la primera prueba.
+**Alternativa descartada 1:** Cascada. Exige requisitos cerrados al inicio, y en un proyecto que depende de hardware real los requisitos cambian en la primera prueba.
 
-**Alternativa descartada 2:** Modelo V. La carga documental no se justifica para un solo desarrollador y un sistema sin requisitos de seguridad críticos.
+**Alternativa descartada 2:** Modelo V. La carga documental no es demaciada para un solo desarrollador y un sistema sin requisitos de seguridad críticos.
 
 ---
 
