@@ -32,8 +32,8 @@ Las apps para el control de iluminación inteligente están atadas a marcas y ec
 | Tipo de usuario | Qué necesita del sistema | Qué le preocupa |
 |---|---|---|
 | Comunidad maker/DIY | Controlar su lámpara, bocina o tira LED sin programar una app desde cero | Que el hardware sea difícil de conseguir o el firmware inestable |
-| Integradores de Home Assistant | Audio + luces en un solo dispositivo, controlable programablemente desde su ecosistema | Que la integración con MQTT o Matter sea compleja o poco confiable |
-| Usuarios que evitan ecosistemas cerrados | AirPlay + Bluetooth + luces en un solo dispositivo, sin depender de una marca | Que el control remoto dependa de servicios de terceros o autenticación limitada |
+| Consumidor plug-and-play | Que su producto funcione de inmediato | Que le pidan conocimientos técnicos; que la app sea complicada |
+| Miembro del hogar | Control básico y rápido de los dispositivos de la casa sin configurar nada | Que la interfaz lo confunda o que "rompa" algo de la configuración del dueño |
 
 **Un conflicto entre usuarios:**  
 El usuario casual quiere abrir la web y elegir un efecto en dos clics; el maker quiere un editor de animaciones frame a frame. Esa tensión definió la decisión de que los efectos predefinidos sean el flujo principal y el editor de animaciones una capa encima, no al revés.
@@ -43,6 +43,7 @@ El usuario casual quiere abrir la web y elegir un efecto en dos clics; el maker 
 ## 3. Alcance
 
 **Dentro del alcance**
+
 App:
 - Conexión con dispositivos vía MQTT over WebSockets, usando la MAC como identificador.
 - Envío de frames de animación RGBA en modo streaming.
@@ -71,7 +72,9 @@ Dispositivo:
 - Configuración de la red WiFi de los dispositivos (cada dispositivo expone su propio captive portal para eso).
 - Almacenamiento de animaciones en el navegador (las animaciones se envían y persisten en el dispositivo).
 - App móvil nativa: el control es web únicamente.
-- Autenticación MQTT en la fase de pruebas: el broker público de desarrollo no tiene auth. La autenticación y ACLs son requisito de la fase de producción.
+
+**In progress**
+- Autenticación MQTT: el broker público de desarrollo no tiene auth. Pero la autenticación y ACLs son requisito de la fase de producción.
 
 ---
 
@@ -101,7 +104,7 @@ La arquitectura tiene tres componentes:
 - Cada sprint entrega un slice vertical usable: conexión → control de efectos → streaming → editor de animaciones.
 
 **Sprints**
-- *Sprint 1:* Frontend conecta al broker público y controla efectos/brillo de la Luna (lo que ya funciona, formalizado).
+- *Sprint 1:* Frontend conectado al broker público y controla efectos y brillo de la Luna ([Ver dispositivo](https://github.com/Alice-IA/airplay-moon-speaker)).
 - *Sprint 2:* Streaming de frames RGBA + selección de dispositivo por MAC.
 - *Sprint 3:* Backend + DB: cuentas de usuario y registro/vinculación de dispositivos.
 - *Sprint 4:* Editor de animaciones personalizadas + persistencia en DB.
