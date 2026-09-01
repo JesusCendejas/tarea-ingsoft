@@ -83,9 +83,10 @@ Dispositivo:
 **Tipo de sistema:** Aplicación web de tiempo real para control de dispositivos IoT sobre MQTT. (SAAS)
 
 La arquitectura tiene tres componentes:
- 1.- **Frontend:** interfaz de control en MQTT.js sobre WebSocket seguro.
- 2.- **Backend:** gestiona cuentas de usuario, dispositivos registrados y la autorización de qué usuario puede controlar qué dispositivo. También puede persistir animaciones creadas por el usuario y compartirlas entre dispositivos.
- 3.- **Broker MQTT:** canal de comunicación con los dispositivos. En desarrollo se usa un broker público (HiveMQ, sin autenticación). **En producción se migrará a un broker con autenticación por usuario/dispositivo (ACL por topic)**, de forma que cada usuario solo pueda publicar y suscribirse a los topics de sus propios dispositivos.
+
+1.- **Frontend:** interfaz de control en MQTT.js sobre WebSocket seguro.
+2.- **Backend:** gestiona cuentas de usuario, dispositivos registrados y la autorización de qué usuario puede controlar qué dispositivo. También puede persistir animaciones creadas por el usuario y compartirlas entre dispositivos.
+3.- **Broker MQTT:** canal de comunicación con los dispositivos. En desarrollo se usa un broker público (HiveMQ, sin autenticación). **En producción se migrará a un broker con autenticación por usuario/dispositivo (ACL por topic)**, de forma que cada usuario solo pueda publicar y suscribirse a los topics de sus propios dispositivos.
 
 **Atributos de calidad prioritarios:**
 - *Seguridad:* un usuario solo puede controlar dispositivos que le pertenecen (aislamiento por topic, credenciales únicas por dispositivo).
