@@ -11,7 +11,7 @@
 **Nombre del sistema:** MoonLight
 
 **Descripción:**  
-MoonLight es una webapp de control para dispositivos de iluminación inteligente compatibles: bocinas, lámparas y controladores de tiras LED WS2812. Desde cualquier navegador, el usuario controla animaciones RGBA en tiempo real, efectos predefinidos, brillo y color, y diseña sus propias animaciones — todo sobre MQTT, sin instalar apps nativas ni depender de un ecosistema cerrado.
+MoonLight es una webapp de control para dispositivos de iluminación inteligente compatibles: lámparas y controladores de tiras LED  MQTT. Desde cualquier navegador, el usuario controla animaciones RGBA en tiempo real, efectos predefinidos, brillo y color, y diseña sus propias animaciones — todo sobre MQTT, sin instalar apps nativas ni depender de un ecosistema cerrado.
 
 **Nota de alcance:** los dispositivos (bocina inteligente, lámparas, controladores de tiras) son productos independientes con su propio firmware. Este proyecto cubre únicamente la webapp; los dispositivos se tratan como sistemas externos que siguen el protocolo MQTT conocido.
 
@@ -33,10 +33,10 @@ Las apps para el control de iluminación inteligente están atadas a marcas y ec
 |---|---|---|
 | Comunidad maker/DIY | Controlar su lámpara, bocina o tira LED sin programar una app desde cero | Que el hardware sea difícil de conseguir o el firmware inestable |
 | Consumidor plug-and-play | Que su producto funcione de inmediato | Que le pidan conocimientos técnicos; que la app sea complicada |
-| Miembro del hogar | Control básico y rápido de los dispositivos de la casa sin configurar nada | Que la interfaz lo confunda o que "rompa" algo de la configuración del dueño |
+| Usuario de otras apps | Control básico y rápido de los dispositivos de la casa sin configurar nada | Agregar una nueva app para controlar mas dispositivos |
 
 **Un conflicto entre usuarios:**  
-El usuario casual quiere abrir la web y elegir un efecto en dos clics; el maker quiere un editor de animaciones frame a frame. Esa tensión definió la decisión de que los efectos predefinidos sean el flujo principal y el editor de animaciones una capa encima, no al revés.
+El usuario casual quiere abrir la web y elegir un efecto/color en dos clics; el maker quiere un editor de animaciones frame a frame. Esa tensión definió la decisión de que los efectos predefinidos sean el flujo principal y el editor de animaciones una capa encima.
 
 ---
 
@@ -80,7 +80,7 @@ Dispositivo:
 
 ## 4. Tipo de sistema y atributos de calidad
 
-**Tipo de sistema:** Aplicación web de tiempo casi real (soft real-time) para control de dispositivos IoT.
+**Tipo de sistema:** Aplicación web de tiempo real para control de dispositivos IoT sobre MQTT. (SAAS)
 
 La arquitectura tiene tres componentes:
  1.- **Frontend:** interfaz de control en MQTT.js sobre WebSocket seguro.
@@ -117,17 +117,3 @@ La arquitectura tiene tres componentes:
 
 ---
 
-## Antes de entregar
-
-Reviso que el documento cumpla lo siguiente:
-
-- [ ] La descripción del apartado 1 se entiende sin ser del área
-- [ ] Hay al menos dos tipos de usuario con necesidades distintas
-- [ ] Identifiqué un conflicto real entre usuarios
-- [ ] El alcance dice qué queda fuera, no solo qué queda dentro
-- [ ] Las exclusiones son específicas, no genéricas
-- [ ] Identifiqué el tipo de sistema y al menos dos atributos de calidad
-- [ ] Anoté al menos tres reglas de negocio no obvias
-- [ ] Justifiqué el ciclo de vida contra dos alternativas descartadas
-- [ ] El documento está en mi repositorio y se puede leer desde el navegador
-- [ ] Borré todas las instrucciones en cursiva de la plantilla
