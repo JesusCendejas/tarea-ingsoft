@@ -90,7 +90,7 @@ La arquitectura tiene tres componentes:
 
 ## 5. Modelo de desarrollo
 
-**Recomendado:** Iterativo e incremental (Scrum, sprints de 1-2 semanas).
+**Recomendado:** Scrum con sprints de 1-2 semanas.
 
 **Por qué encaja:**
 - Un solo desarrollador: la ceremonia pesada sobra, pero las iteraciones cortas con demo contra hardware real no.
