@@ -35,7 +35,6 @@ Las apps para el control de iluminación inteligente están atadas a marcas y ec
 |---|---|---|
 | Comunidad maker/DIY | Controlar su lámpara, bocina o tira LED sin programar una app desde cero | Que el hardware sea difícil de conseguir o el firmware inestable |
 | Consumidor plug-and-play | Que su producto funcione de inmediato | Que le pidan conocimientos técnicos; que la app sea complicada |
-| Usuario de otras apps | Control básico y rápido de los dispositivos de la casa sin configurar nada | Agregar una nueva app para controlar mas dispositivos |
 
 **Un conflicto entre usuarios:**  
 El usuario casual quiere abrir la web y elegir un efecto/color en dos clics; el maker quiere un editor de animaciones frame a frame. Esa tensión definió la decisión de que los efectos predefinidos sean el flujo principal y el editor de animaciones una capa encima.
