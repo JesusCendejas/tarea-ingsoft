@@ -57,7 +57,6 @@ App:
 
 **Explícitamente fuera del alcance**
 
-- Reproducción de audio en el navegador.
 - Configuración de la red WiFi de los dispositivos (cada dispositivo expone su propio captive portal para eso).
 - Almacenamiento de animaciones en el navegador (las animaciones se envían y persisten en el dispositivo).
 - App móvil nativa: el control es web únicamente.
