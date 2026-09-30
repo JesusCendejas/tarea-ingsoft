@@ -28,6 +28,27 @@
 
 -   ****RF-16**** · El sistema ofrece actualización de firmware OTA únicamente para dispositivos propietarios.
 
+
+****Cuentas y sesión****
+
+-   ****RF-17**** · El sistema autentica al usuario con su correo y contraseña y abre su sesión.
+-   ****RF-18**** · El sistema permite editar el nombre de un dispositivo vinculado.
+
+****Escenas****
+
+-   ****RF-19**** · El sistema muestra las escenas guardadas en la cuenta del usuario.
+-   ****RF-20**** · El sistema guarda una escena con la configuración de varios dispositivos (efecto, animación, color, brillo) para activarla en conjunto.
+-   ****RF-21**** · El sistema aplica una escena enviando a cada dispositivo incluido su configuración guardada.
+
+****Personalización****
+
+-   ****RF-22**** · El sistema guarda colores favoritos en la cuenta del usuario, disponibles en el selector de color de todos sus dispositivos.
+
+****Habitaciones****
+
+-   ****RF-23**** · El sistema registra habitaciones en la cuenta del usuario para organizar sus dispositivos y escenas por ubicación.
+-   ****RF-24**** · El sistema asigna un dispositivo a una habitación y lo muestra agrupado por ubicación en la lista de dispositivos.
+-   ****RF-25**** · El sistema agrupa las escenas de la cuenta por habitación.
 ## Requerimientos no funcionales
 
 ****Rendimiento****

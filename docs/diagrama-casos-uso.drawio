@@ -1,0 +1,108 @@
+<mxfile host="app.diagrams.net" agent="Letta Code" version="24.0.0">
+  <diagram name="Casos de uso MoonLight" id="cu-moonlight">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="frame" value="MoonLight" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="810" height="950" as="geometry" />
+        </mxCell>
+        <mxCell id="actorUser" value="Usuario" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="140" y="290" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actorMaker" value="Maker" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="140" y="620" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gen1" style="endArrow=block;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="actorMaker" target="actorUser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uc01" value="Registrar una cuenta&#10;(CU-01)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="90" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc03" value="Vincular un dispositivo&#10;(CU-03)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc04" value="Consultar estado de un dispositivo&#10;(CU-04)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="310" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc05" value="Actualizar información del dispositivo&#10;(CU-05)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="420" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc16" value="Seleccionar ubicación del dispositivo&#10;(CU-16)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="530" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc15" value="Agregar una habitación&#10;(CU-15)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="330" y="640" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc02" value="Iniciar sesión&#10;(CU-02)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="90" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc06" value="Activar un efecto&#10;(CU-06)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc07" value="Detener animación o efecto&#10;(CU-07)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="310" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc10" value="Enviar animación guardada&#10;(CU-10)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="420" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc11" value="Consultar escenas&#10;(CU-11)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="530" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc12" value="Crear una escena&#10;(CU-12)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="640" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc13" value="Agregar colores favoritos&#10;(CU-13)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="750" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc14" value="Actualizar firmware (OTA)&#10;(CU-14)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="860" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc08" value="Transmitir animación en vivo&#10;(CU-08)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="870" y="200" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc09" value="Crear una animación&#10;(CU-09)" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="870" y="310" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ucExtProbar" value="Probar animación en el dispositivo" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="420" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ucExtRec" value="Recuperar contraseña" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="90" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a01" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc01"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a02" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a03" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc03"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a04" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc04"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a05" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc05"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a06" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc06"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a07" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc07"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a10" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a11" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc11"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a12" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc12"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a13" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc13"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a14" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc14"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a15" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc15"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="a16" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorUser" target="uc16"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="am08" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorMaker" target="uc08"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="am09" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="actorMaker" target="uc09"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i03" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc03" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i04" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc04" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i05" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc05" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i06" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc06" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i07" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc07" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i08" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc08" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i09" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc09" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i10" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc10" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i11" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc11" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i12" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc12" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i13" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc13" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i14" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc14" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i15" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc15" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="i16" value="«include»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="uc16" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="x01" value="«extend»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="ucExtRec" target="uc02"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="x02" value="«extend»" style="endArrow=open;dashed=1;html=1;rounded=0;endSize=10;fontSize=10;" edge="1" parent="1" source="ucExtProbar" target="uc09"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
