@@ -6,8 +6,8 @@
 |---|---|
 | **Sistema** | MoonLight |
 | **Autor** | Jesus Cendejas |
-| **Versión** | 1.0 |
-| **Fecha de la última actualización** | 2026-09-29 |
+| **Versión** | 1.2 |
+| **Fecha de la última actualización** | 2026-10-01 |
 
 
 
@@ -491,21 +491,21 @@ Los casos de uso se trabajaron en la semana 7. El detalle de cada uno (actor, ob
 | Requisito | Origen | Caso de uso | Elemento del prototipo |
 |---|---|---|---|
 | RF-001 | Visión del producto | CU-01 | Pantalla de registro e inicio de sesión (Sprint 3, pendiente) |
-| RF-002 | Visión del producto | CU-02 | Modal "Agregar dispositivo" de la webapp |
-| RF-003 | Visión del producto | CU-02 | Backend: validación de MAC única (Sprint 3, pendiente) |
-| RF-004 | Visión del producto | CU-03 | Pestaña Dispositivos de la webapp |
-| RF-005 | Visión del producto | CU-03 | Suscripción al estado del dispositivo + mensaje de última voluntad (webapp + firmware) |
-| RF-006 | Visión del producto | CU-03 | Pantalla de estado detallado del dispositivo (webapp) |
-| RF-007 | Conflicto de usuarios | CU-04 | Pestaña Efectos de la webapp |
-| RF-008 | Visión del producto | CU-04 | Control de brillo de la webapp |
-| RF-009 | Visión del producto | CU-05 | Botón "Detener" de la webapp |
-| RF-010 | Visión del producto | CU-06 | Modo streaming de la webapp (frames RGBA) |
-| RF-011 | Protocolo del dispositivo | CU-04, CU-06 | Comportamiento del firmware (verificado en hardware) |
-| RF-012 | Caso de uso CU-04 | CU-04, CU-05, CU-08 | Validación de estado antes de enviar (pendiente) |
-| RF-013 | Conflicto de usuarios | CU-07 | Editor de animaciones (Sprint 4, pendiente) |
-| RF-014 | Visión del producto | CU-07 | Backend + DB: biblioteca de animaciones (Sprint 4, pendiente) |
-| RF-015 | Visión del producto | CU-08 | Envío de animación guardada con adaptación de LEDs (Sprint 4, pendiente) |
-| RF-016 | Visión del producto | CU-09 | Actualización OTA desde el estado del dispositivo (pendiente) |
+| RF-002 | Visión del producto | CU-03 | Modal "Agregar dispositivo" de la webapp |
+| RF-003 | Visión del producto | CU-03 | Backend: validación de MAC única (Sprint 3, pendiente) |
+| RF-004 | Visión del producto | CU-04 | Pestaña Dispositivos de la webapp |
+| RF-005 | Visión del producto | CU-03, CU-04 | Suscripción al estado del dispositivo + mensaje de última voluntad (webapp + firmware) |
+| RF-006 | Visión del producto | CU-04 | Pantalla de estado detallado del dispositivo (webapp) |
+| RF-007 | Conflicto de usuarios | CU-06 | Pestaña Efectos de la webapp |
+| RF-008 | Visión del producto | CU-06 | Control de brillo de la webapp |
+| RF-009 | Visión del producto | CU-07 | Botón "Detener" de la webapp |
+| RF-010 | Visión del producto | CU-08 | Modo streaming de la webapp (frames RGBA) |
+| RF-011 | Protocolo del dispositivo | CU-06, CU-08 | Comportamiento del firmware (verificado en hardware) |
+| RF-012 | Caso de uso CU-06 | CU-06, CU-07, CU-10, CU-11 | Validación de estado antes de enviar (pendiente) |
+| RF-013 | Conflicto de usuarios | CU-09 | Editor de animaciones (Sprint 4, pendiente) |
+| RF-014 | Visión del producto | CU-09 | Backend + DB: biblioteca de animaciones (Sprint 4, pendiente) |
+| RF-015 | Visión del producto | CU-10 | Envío de animación guardada con adaptación de LEDs (Sprint 4, pendiente) |
+| RF-016 | Visión del producto | CU-14 | Actualización OTA desde el estado del dispositivo (pendiente) |
 | RF-017 | Caso de uso CU-02 | CU-02 | Pantalla de inicio de sesión (Sprint 3, pendiente) |
 | RF-018 | Caso de uso CU-05 | CU-05 | Edición de nombre en detalles del dispositivo (pendiente) |
 | RF-019 | Caso de uso CU-11 | CU-11 | Sección de escenas (pendiente) |
@@ -515,14 +515,22 @@ Los casos de uso se trabajaron en la semana 7. El detalle de cada uno (actor, ob
 | RF-023 | Caso de uso CU-15 | CU-15 | Gestión de habitaciones (pendiente) |
 | RF-024 | Caso de uso CU-16 | CU-16 | Asignación de habitación en detalles del dispositivo (pendiente) |
 | RF-025 | Decisión de diseño | CU-11 | Agrupación de escenas por habitación (pendiente) |
-| RNF-REN-001 | Tipo de sistema | CU-06 | Streaming de frames (webapp + firmware) |
-| RNF-REN-002 | Tipo de sistema | CU-04 | Envío de comandos (webapp) |
-| RNF-REN-003 | Protocolo del dispositivo | CU-03 | Indicador de estado en la lista de dispositivos |
+| RNF-REN-001 | Tipo de sistema | CU-08 | Streaming de frames (webapp + firmware) |
+| RNF-REN-002 | Tipo de sistema | CU-06 | Envío de comandos (webapp) |
+| RNF-REN-003 | Protocolo del dispositivo | CU-04 | Indicador de estado en la lista de dispositivos |
 | RNF-SEG-001 | Atributo de calidad | CU-02 | Broker propio con ACL por topic (Sprint 5, pendiente) |
 | RNF-SEG-002 | Atributo de calidad | CU-02 | Credenciales por dispositivo (Sprint 5, pendiente) |
-| RNF-USA-001 | Conflicto de usuarios | CU-04 | Flujo principal de la pestaña Efectos |
-| RNF-USA-002 | Conflicto de usuarios | CU-02 | Flujo completo de registro → vincular → efecto |
-| RNF-POR-001 | Tipo de sistema | CU-04, CU-06 | PWA en navegadores (matriz de pruebas, Sprint 6) |
-| RNF-INT-001 | Tipo de sistema | CU-02, CU-08 | Vinculación por protocolo documentado (docs/API.md) |
+| RNF-USA-001 | Conflicto de usuarios | CU-06 | Flujo principal de la pestaña Efectos |
+| RNF-USA-002 | Conflicto de usuarios | CU-01, CU-03, CU-06 | Flujo completo de registro → vincular → efecto |
+| RNF-POR-001 | Tipo de sistema | CU-03, CU-06, CU-08 | PWA en navegadores (matriz de pruebas, Sprint 6) |
+| RNF-INT-001 | Tipo de sistema | CU-03, CU-10 | Vinculación por protocolo documentado (docs/API.md) |
 
 
+
+## 7. Registro de cambios
+
+| Versión | Fecha | Cambio |
+|---|---|---|
+| 1.0 | 2026-09-29 | Versión inicial: propósito y alcance, usuarios y contexto, RF-001 a RF-016 con ficha completa, RNF agrupados por atributo de calidad con métrica, casos de uso y tabla de trazabilidad. |
+| 1.1 | 2026-09-30 | Se agregan los requisitos RF-017 a RF-025 (inicio de sesión, edición del nombre del dispositivo, escenas, colores favoritos y habitaciones). Se agregan los casos de uso CU-02 (Iniciar sesión) y CU-05 (Actualizar información del dispositivo), se renumeran los casos de uso posteriores y se agregan CU-11 a CU-16 (escenas, colores favoritos y habitaciones). Se actualiza la sección 5. |
+| 1.2 | 2026-10-01 | Se corrige la tabla de trazabilidad (sección 6): las referencias a casos de uso se actualizan a la numeración vigente definida en la sección 5 (CU-01 a CU-16). Se agrega este registro de cambios. |
