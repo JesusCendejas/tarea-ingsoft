@@ -118,27 +118,85 @@ Si dos personas abren la página al mismo tiempo y las dos tocan controles del m
 3. ¿Hay alguna situación que ocurra con tus dispositivos y que consideres importante tomar en cuenta para MoonLightApp?
 4. ¿Hay alguna función que te gustaría encontrar en MoonLightApp y que no hayamos mencionado?
 
+
 ## BITÁCORA DE LA ENTREVISTA
 
 **Fecha de aplicación:** lunes 21 de septiembre de 2026.
-**Persona entrevistada:** Luz Yaneli / Cliente
+**Persona entrevistada:** Luz Yanelly Garduño / cliente (perfil usuario y maker)
 **Duración:** 1 hora
 
 ### Supuestos confirmados
 
+**Control sin instalar nada.** Se confirmó que el valor principal de MoonLight es abrir la página en el teléfono o la laptop y tener ahí todos los dispositivos, sin app nativa. El entrevistado lo contrasta de forma directa con la experiencia anterior — programa de escritorio y cable para la luna, app llena de anuncios y en inglés para la lámpara — y considera que el cambio a la página fue exactamente lo que quería.
 
+**Registro de un dispositivo nuevo mediante el código de la etiqueta.** Se confirmó el flujo: el aparato trae un código impreso que se captura una sola vez, y después el dispositivo aparece siempre en la lista de la cuenta sin volver a registrarlo. El entrevistado lo vivió con la lámpara.
+
+**Los efectos predefinidos bastan para el uso diario.** Se confirmó que la mayoría del uso se resuelve escogiendo un efecto existente (mencionó "luz de noche" como el de mayor uso, además de un efecto tipo vela y efectos de color). Los efectos se eligen en segundos y no requieren conocimiento técnico.
+
+**Persistencia de las animaciones propias.** Se confirmó — y el entrevistado lo señaló como lo más valioso de todo — que las animaciones creadas quedan guardadas en el dispositivo y también en la cuenta, de modo que al cambiar un dispositivo viejo por uno nuevo se pueden pasar las animaciones sin rehacerlas.
+
+**Concurrencia sin control: gana el último que toca.** Se confirmó el comportamiento actual. No hay aviso, ni permiso, ni bloqueo; cada usuario ve su propia pantalla como si estuviera solo y el dispositivo obedece el último comando recibido. El entrevistado describe que ocurre seguido porque comparte la cuenta con su hermano.
+
+**La configuración de WiFi queda fuera de MoonLight.** Se confirmó como decisión correcta: el aparato crea su propia red la primera vez y ahí se captura la contraseña de la casa. El entrevistado lo describe como "un rollo aparte" que se hace una sola vez y que no quiere tener que explicar a terceros.
+
+**Los efectos y las animaciones compiten y gana la animación.** Se confirmó: si está corriendo un efecto y se envía una animación, lo que se ve es la animación. El entrevistado lo aprendió por su cuenta al creer que un envío había fallado.
+
+**La tensión entre usuario casual y maker.** Se confirmó con fuerza. El uso diario debe resolverse en dos clics con efectos listos; el editor detallado es una capacidad aparte, y hoy resulta hostil para quien no sabe de animación.
 
 ### Supuestos que resultaron falsos o que necesitan modificarse
 
+**Se asumía que el estado del dispositivo ya estaba cubierto con conectado/desconectado.** Resultó falso. El dolor principal del entrevistado es que la página muestra los controles pero no el estado actual: no puede ver qué efecto, color o animación está corriendo en el aparato en ese momento. Esto lo obliga a deducir el estado tocando controles y observando qué pasa. Necesita modificarse: mostrar el estado real del dispositivo, no solo los controles.
 
+**Se asumía que la página refleja el estado real del aparato.** Resultó falso. Cuando se cae el internet, la luna se queda encendida con lo último que tenía, pero la página la marca como desconectada; cuando el internet regresa, la página puede seguir diciendo "desconectada" hasta que el usuario recarga manualmente. Necesita modificarse: refresco o reconexión automática del estado.
+
+**Se asumía que un dispositivo desconectado no recibe comandos.** Resultó parcialmente falso en la práctica: el dispositivo efectivamente no recibe nada, pero la página deja intentarlo sin impedirlo ni advertirlo con claridad. Necesita modificarse: bloquear o marcar de forma explícita los comandos cuando el dispositivo no está disponible.
+
+**Se asumía que el editor de animaciones sirve para cualquier usuario.** Resultó falso. El entrevistado lo describe como "hecho para otra clase de persona": suelta todos los LEDs y todos los cuadros sin guía, y él tuvo que aprender a pura prueba y error. Necesita modificarse: plantillas o un modo guiado, dejando el editor detallado como capa separada.
+
+**Se asumía que el alcance de la transferencia entre dispositivos eran las animaciones.** Queda por definir. El entrevistado no sabe si al cambiar de dispositivo también se transfieren el brillo, el color o el efecto actual, o únicamente las animaciones. Necesita precisarse antes de implementarlo.
+
+**Se asumía que las escenas se explican solas.** Resultó falso. El entrevistado las menciona como una idea que suena bien pero que al tratar de explicarla en voz alta no le queda del todo clara, ni a él mismo. Necesita modificarse: definir y simplificar cómo se crean y se activan.
 
 ### Información inesperada
 
+**La falta de confirmación de que un comando llegó.** Surgió de forma espontánea como una molestia recurrente: el entrevistado no tiene manera de saber si un cambio se aplicó o no, sobre todo cuando el dispositivo está inestable. La duda constante "¿llegó o no llegó?" lo lleva a reenviar comandos por si acaso.
 
+**Una misma cuenta compartida por varias personas.** No existen cuentas por persona: el entrevistado y su hermano entran con la misma cuenta desde sus propios teléfonos, y también dio acceso a su prima. Esto cambia el modelo de acceso y explica por qué la concurrencia le importa más de lo previsto.
+
+**No existe plan B si se pierde la etiqueta con el código de registro.** El entrevistado planteó la duda él mismo: si el código se pierde antes de registrar el dispositivo, no sabe qué pasaría ni qué alternativa habría.
+
+**El valor percibido más alto no es el control en vivo, sino la conservación del trabajo propio.** Al preguntar por el cambio de dispositivo, lo que más le importó no fue la configuración ni los efectos, sino no perder las animaciones que creó, porque le costaron trabajo.
+
+**La tolerancia a la concurrencia cambia al pensar en más usuarios.** En su casa, que gane el último no le molesta porque es su hermano y es una luz. Pero al imaginar regalar o vender el dispositivo, considera que el mismo comportamiento se vuelve un problema y pide al menos un aviso de que alguien más está controlando el dispositivo.
 
 ### Cambios que se realizarán en MoonLightApp
 
+**Mostrar el estado actual del dispositivo.** Además de los controles, la interfaz debe indicar qué efecto, color o animación está corriendo en el aparato en ese momento. Es el cambio de mayor prioridad porque corresponde al dolor principal detectado.
 
+**Actualización automática del estado.** La página debe reflejar por sí sola la desconexión y la reconexión del dispositivo, sin depender de que el usuario recargue manualmente.
+
+**Comandos no enviables cuando el dispositivo está desconectado.** Cuando no haya conexión, la interfaz debe impedir el envío o marcarlo con claridad, en lugar de permitir que el usuario toque controles que no tendrán efecto.
+
+**Confirmación de que un cambio se aplicó.** Se agregará una señal visible de que el comando llegó al dispositivo, para eliminar la incertidumbre de "¿llegó o no llegó?".
+
+**Editor de animaciones accesible.** Se agregará un modo guiado o plantillas (por ejemplo girar, latir, parpadear) para usuarios sin conocimientos de animación, manteniendo el editor detallado como una capa aparte para quien sí lo quiera usar.
+
+**Definir el alcance de la transferencia entre dispositivos.** Se precisará qué elementos se trasladan al cambiar de aparato — animaciones y también configuración de brillo, color o efecto — y se documentará en la interfaz.
+
+**Aviso de uso concurrente.** Se evaluará notificar cuando otra persona esté controlando el mismo dispositivo, sin llegar a bloquear ni a pedir permiso para cada acción.
+
+**Alternativa para el código de registro perdido.** Se definirá un procedimiento para registrar un dispositivo cuya etiqueta se perdió.
+
+**Claridad en las escenas.** Se simplificará la creación y activación de escenas, y se revisará cómo se explican dentro de la propia interfaz.
 
 ### Conclusión de la entrevista
 
+La entrevista confirmó que la decisión de fondo de MoonLight — una página web sin instalación, con los dispositivos de la persona siempre a la vista — es la correcta, y que los efectos predefinidos y la persistencia de las animaciones propias ya resuelven buena parte del uso diario. También confirmó el flujo de registro por código de etiqueta y la conveniencia de dejar la configuración de WiFi fuera del sistema.
+
+Lo más valioso que salió de la entrevista fue una corrección de foco: el problema principal del usuario no es controlar las luces, sino saber qué están haciendo. La página muestra controles, no estado. De ahí se derivan los cambios prioritarios: mostrar qué está corriendo en el dispositivo, mantener ese estado actualizado sin recargar, avisar cuando el dispositivo no está disponible y confirmar que un comando se aplicó.
+
+En segundo lugar quedó el editor de animaciones. La función existe y se usa, pero está construida para un perfil que no es el del usuario común; separar un modo guiado del editor detallado permite conservar la potencia sin que el uso diario se vuelva cuesta arriba.
+
+También quedaron a la vista dos puntos que exigen definición antes de implementarse: qué se transfiere al cambiar de dispositivo y cómo se comporta el sistema cuando varias personas comparten una misma cuenta. Este último hoy es tolerable porque el usuario comparte la cuenta con su hermano, pero deja de serlo en el escenario de regalar o vender dispositivos, que es justamente uno de los objetivos de MoonLight.
+
+Con esta información se pueden ajustar los requisitos de MoonLightApp y priorizar las funciones que realmente responden a lo que el usuario necesita, en lugar de las que solo amplían lo que el sistema ya hace.
